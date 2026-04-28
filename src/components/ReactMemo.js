@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 
-const ChildComponent = React.memo(({ count }) => {
-
-  console.log("Child Rendered");
+const Child = React.memo(({ count }) => {
 
   return (
     <div>
-      <h3>React.memo Example</h3>
+      <h3>React.memo Section</h3>
       <p>Count Value: {count}</p>
     </div>
   );
@@ -31,10 +29,10 @@ const ReactMemo = () => {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Type something"
+        placeholder="Type here"
       />
 
-      <ChildComponent count={count} />
+      <Child count={count} />
 
     </div>
   );
