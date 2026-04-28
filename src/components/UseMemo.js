@@ -19,19 +19,15 @@ const UseMemo = () => {
 
   };
 
-  const expensiveCalculation = (num) => {
-    console.log("Calculating...");
-    return num * 2;
-  };
-
+  // Expensive calculation
   const calculation = useMemo(() => {
-    return expensiveCalculation(count);
+    return count * 2;
   }, [count]);
 
   return (
     <div>
 
-      <h3>useMemo Example</h3>
+      <h3>useMemo Section</h3>
 
       <p>Count: {count}</p>
 
@@ -55,9 +51,9 @@ const UseMemo = () => {
       </button>
 
       <ul>
-        {tasks.map((task, index) => {
-          return <li key={index}>{task}</li>;
-        })}
+        {tasks.map((task, index) => (
+          <li key={index}>{task}</li>
+        ))}
       </ul>
 
     </div>
