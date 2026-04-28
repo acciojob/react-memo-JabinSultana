@@ -20,9 +20,9 @@ const App = () => {
       </button>
 
       <ul>
-        {todos.map((todo, index) => {
-          return <li key={index}>{todo}</li>;
-        })}
+        {todos.map((todo, index) => (
+          <li key={index}>{todo}</li>
+        ))}
       </ul>
 
       <hr />
